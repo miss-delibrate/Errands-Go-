@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ErrandGo</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+  <script defer src="firebase-config.js"></script>
+  <script defer src="auth.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header>
+    <h1>ErrandGo</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#" onclick="showLogin()">Login</a>
+      <a href="#" onclick="showDashboard()">Dashboard</a>
+    </nav>
+  </header>
+  <main>
+    <section class="intro">
+      <h2>Need an Errand Runner?</h2>
+      <p>Send someone to get what you need, when you need it.</p>
+    </section>
+    <section class="actions">
+      <button onclick="startAsSender()">Send an Errand</button>
+      <button onclick="startAsRunner()">Become a Runner</button>
+    </section>
+    <section class="login" style="display:none;">
+      <input type="email" id="email" placeholder="Email">
+      <input type="password" id="password" placeholder="Password">
+      <button onclick="login()">Login</button>
+      <button onclick="signup()">Sign Up</button>
+    </section>
+    <section class="payment">
+      <h3>Make a Payment</h3>
+      <button onclick="payWithPaystack()">Pay Now</button>
+    </section>
+  </main>
+</body>
+</html>
